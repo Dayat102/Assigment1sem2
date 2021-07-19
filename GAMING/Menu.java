@@ -13,7 +13,7 @@ public class Menu {
 		
 		int menu,staffnum,age,menu1;
 		char gender;
-		String name=null;
+		String name;
 		Advertisement d = new Advertisement();
 		GamingDescription e = new GamingDescription();
 		System.out.println("Welcome to " + a.getName());
@@ -72,12 +72,10 @@ public class Menu {
 	            	do {
 		            	System.out.println(":::::::::::: Menu ::::::::::::");
 			            System.out.println("1. Register Name.");
-			            System.out.println("2. Search Participant,");
-			            System.out.println("3. Delete Name.");
-			            System.out.println("4. Display Participant.");
+			            System.out.println("2. Display Participant.");
 			            System.out.println("0. Main Menu");
 			            
-			            System.out.print("\nEnter your choice (1 - 4) or 0 to Back: ");
+			            System.out.print("\nEnter your choice (1 - 2) or 0 to Back: ");
 			            menu1 = sc.nextInt();
 		                
 			            if(menu1==0) {
@@ -98,18 +96,6 @@ public class Menu {
 		                }
 		                
 		                else if(menu1==2) {
-			                System.out.print("\nEnter the name you want to search: ");
-			                name = sc.next();
-			                people.searchRecord(name);
-		                }
-		                
-		                else if(menu1==2) {
-			                System.out.print("\nEnter the name you want to delete: ");
-			                name = sc.next();
-			                people.deleteRecord(name);
-		                }
-		                
-		                else if(menu1==4) {
 		                	people.displayRecord();
 		                }
 		                
